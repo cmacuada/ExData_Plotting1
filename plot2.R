@@ -22,5 +22,6 @@ data.2 <- as_tibble(data_graph) %>%
 #Plot 2
 plot(x = data.2$datetime, y = data.2$Global_active_power,  ylab = "Global Active Power (kilowatts)", xlab = "", type = "l")
 
-png("plot2.png", width = 400, height = 400)
+dev.copy(png, file = "plot2.png", width = 400, height = 400)
 dev.off()
+

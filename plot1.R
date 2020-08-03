@@ -22,5 +22,5 @@ data.2 <- as_tibble(data_graph) %>%
 hist(data.2$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
 
 
-png("plot1.png", width = 400, height = 400)
+dev.copy(png, file = "plot1.png", width = 400, height = 400)
 dev.off()

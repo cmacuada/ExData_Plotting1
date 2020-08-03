@@ -20,7 +20,8 @@ data.2 <- as_tibble(data_graph) %>%
 with(data.2, plot(datetime, Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "l"))
 with(data.2, lines(datetime, Sub_metering_2, col = "red"))
 with(data.2, lines(datetime, Sub_metering_3, col = "blue"))
-legend("topright", pch = 1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col = c("black", "blue", "red"))
+legend("topright", pch = 1, legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
+       col = c("black", "blue", "red"), cex = .9)
 
-png("plot3.png", width = 400, height = 400)
+dev.copy(png, file = "plot3.png", width = 400, height = 400)
 dev.off()
